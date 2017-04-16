@@ -1,0 +1,36 @@
+{
+  "name": "exstatic",
+  "version": "0.0.1",
+  "description": "Simple portable static server",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dylanitorium/exstatic.git"
+  },
+  "keywords": [
+    "static",
+    "server",
+    "express",
+    "node"
+  ],
+  "author": "Dylan Sweetensen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dylanitorium/exstatic/issues"
+  },
+  "homepage": "https://github.com/dylanitorium/exstatic#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^3.19.0",
+    "eslint-plugin-node": "^4.2.2",
+    "express": "^4.15.2"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}
