@@ -1,6 +1,5 @@
-#!/usr/bin/env node
 
-import express from 'express';
+import forever from 'forever-monitor';
 import commander from 'commander';
 
 commander
@@ -10,23 +9,20 @@ commander
   .option('-i, --index [index]', 'Specify index file [index.html]', 'index.html')
   .parse(process.argv);
 
-const app = express();
-
-const directory = commander.args[0];
-if (!directory) {
-  console.error('Error: You need to specify a directory');
-  process.exit(1);
-}
-
 const {
   port,
   index,
 } = commander;
 
-app.use(express.static(directory, {
-  index,
-}));
-
-app.listen(port, '127.0.0.1', () => {
-  console.log(`Listening on: http://127.0.0.1:${port}`);
+var child = new (forever.Monitor)('rigor.js', {
+  command: 'sh',
+  max: 3,
+  // silent: true,
+  args: ['', '']
 });
+
+child.on('exit', function () {
+  console.log('your-filename.js has exited after 3 restarts');
+});
+
+child.start();
