@@ -1,2 +1,2 @@
-# ecstatic
+# rigor
 Simple portable static server
