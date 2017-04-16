@@ -1,7 +1,18 @@
 {
-  "plugins": ["node"],
-  "extends": ["eslint:recommended", "plugin:node/recommended"],
-  "rules": {
-      "node/exports-style": ["error", "module.exports"],
+  "extends":[
+    "airbnb"
+  ],
+  "globals":{
+    "window",
+    "document",
+    "fetch",
+    "location",
+  },
+  "rules":{
+    "react/jsx-filename-extension": "off",
+    "no-underscore-dangle": "off",
+    "class-methods-use-this": "off",
+    "no-console": "off",
+    "no-param-reassign": ["error", { "props": false }]
   }
 }
