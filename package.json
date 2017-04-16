@@ -10,7 +10,7 @@
     "test": "test"
   },
   "bin": {
-    "exstatic": "dist/index.js"
+    "rigor": "dist/index.js"
   },
   "repository": {
     "type": "git",
