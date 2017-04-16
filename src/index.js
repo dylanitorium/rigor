@@ -4,7 +4,7 @@ import express from 'express';
 import commander from 'commander';
 
 commander
-  .version('0.0.1')
+  .version('0.0.2')
   .usage('[options] [directory]')
   .option('-p, --port [port]', 'Specify port [8888]', '8888')
   .option('-i, --index [index]', 'Specify index file [index.html]', 'index.html')
