@@ -3,7 +3,7 @@ A simple static server built with express and commander
 
 ## Installation
 ### Global
-`npm install -g rivor`
+`npm install -g rigor`
 
 ### Local
 `npm install --save rigor`
