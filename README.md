@@ -41,6 +41,9 @@ It also doesn't need to be a shell script, just make sure to set the relevant co
 process manager for whatever type of script you use.
 
 ## Options
+### -s, --single
+Flags the server as a single page application and will direct all asset requests to the index file.
+
 ### -p, --port
 Specify the port to use. Defaults to `8888`
 
