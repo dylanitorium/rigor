@@ -15,7 +15,7 @@ var _commander2 = _interopRequireDefault(_commander);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_commander2.default.version('0.0.5').usage('[options] [directory]').option('-s, --single', 'Only serve index', false).option('-p, --port [port]', 'Specify port [8888]', '8888').option('-i, --index [index]', 'Specify index file [index.html]', 'index.html').parse(process.argv);
+_commander2.default.version('0.1.1').usage('[options] [directory]').option('-s, --single', 'Only serve index', false).option('-p, --port [port]', 'Specify port [8888]', '8888').option('-i, --index [index]', 'Specify index file [index.html]', 'index.html').parse(process.argv);
 
 var app = (0, _express2.default)();
 
@@ -36,7 +36,7 @@ app.use(_express2.default.static(directory, {
 
 if (single) {
   app.get('*', function (req, res) {
-    res.sendFile(_path2.default.resolve(__dirname, directory, index));
+    res.sendFile(_path2.default.resolve(directory, index));
   });
 }
 
