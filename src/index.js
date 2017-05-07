@@ -32,7 +32,7 @@ app.use(express.static(directory, {
 
 if (single) {
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, directory, index));
+    res.sendFile(path.resolve(directory, index));
   });
 }
 
