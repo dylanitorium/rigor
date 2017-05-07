@@ -5,7 +5,7 @@ import path from 'path';
 import commander from 'commander';
 
 commander
-  .version('0.0.5')
+  .version('0.1.1')
   .usage('[options] [directory]')
   .option('-s, --single', 'Only serve index', false)
   .option('-p, --port [port]', 'Specify port [8888]', '8888')
